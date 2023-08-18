@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>HOSPITAL MANAGEMENT</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel='stylesheet' type='text/css' media='screen' href='static/appointment.css'>
+        <style>
+          h1{
+            color:red;
+            font-size:7vmin;
+          }
+          td{
+           height:4vh;
+          }
+          select{
+            width:15vw;
+          }
+
+
+        </style>
+        <script>
+            function change() {
+                const department = document.getElementById("department").value;
+                const doctorSelect = document.getElementById("doctor");
+            
+                if (department === "Ent") {
+                  doctorSelect.innerHTML = "<option value='rajesh'>Dr Rajesh</option><option value='deepak'>Dr Deepak</option>";
+                } else if(department==="opd") {
+                  doctorSelect.innerHTML = "<option value='anop>Dr anop</option><option value='sheetal>Dr sheetal</option>"; // Clear the options if department is not "Ent"
+                }
+                else if(department==="onco"){
+                    doctorSelect.innerHTML = "<option value='dheeraj'>Dr dheeraj</option><option value='akshay'>Dr sheetal</option>";
+                }
+                else if(department==="none"){
+                  doctorSelect.innerHTML = "<select id='doctor' name='doctor'><option>Select department*</option></select>";
+                }
+              }
+          
+
+
+              
+          </script>
+    </head>
+    <body><center>
+        <h1 class="appointment">APPOINTMENT</h1>
+        <form action="http://127.0.0.1:5000/patient/appointment" method="post" class="appointment">
+            <table class="form" border="1">
+              <tr>
+                <td>Department:</td>
+                <td>
+                  <select id="department" name="department" onchange="change()" required>
+                    <option value="none">Select Department</option>
+                    <option value="Ent">ENT (Eyes Nose Tongue)</option>
+                    <option value="opd">OPD (Out Patient)</option>
+                    <option value="onco">Oncology</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Doctor:</td>
+                <td id="doctor-container">
+                  <select id="doctor" name="doctor" required>
+                    <option>Select department*</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Book the Date</td>
+                <td><input  type="date" id="date" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD" name="appointment_date" onchange="check()" required>{{avail}}</td>
+              </tr>
+              <tr>
+                <td colspan="2"><center><input type="submit"></center></td>
+              </tr>
+            </table>
+          </form>
+          
+          
+          
+        <center>
+    </body>
+    </html>

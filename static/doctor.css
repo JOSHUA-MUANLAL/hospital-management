@@ -1,0 +1,15 @@
+div.doctor{
+    background-color:antiquewhite;
+    margin-top:25vh;
+    width:70%;
+    height:70vh;
+}
+body.body{
+    width:100%;
+    background-color: black;
+}
+
+form{
+    padding-top:8vh;
+    height:50vh;
+}

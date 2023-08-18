@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HOSPITAL MANAGEMENT</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='static/hospital.css'>
+    <script src='static/hospital.js'></script>
+</head>
+<body>
+    <center><div class="cont">
+        <div class="left" id="left">
+          <button class="left" onclick="admin()">Admin</button>
+          <form id="patient" class="patient" action="http://127.0.0.1:5000/patient" method="post">
+            User id<br><input type="id" id="user" name="user" placeholder="User id"  required><br><br>
+            Password<br><input type="password" id="password" name="password" placeholder="password" required>
+            <br><br><input type="submit" value="Log in">
+          </form>
+        
+            
+            
+        </div>
+        <div class="right" id="right">
+          <button class="right" onclick="patient()" >Patient</button>
+            <form id="admin" class="admin" action="http://127.0.0.1:5000/admin" method="post">
+                Admin<br><input type="id" id="admin" name="admin" placeholder="Admin"  required><br><br>
+                Password<br><input type="password" id="password" name="password" placeholder="password" required>
+                <br><br><input type="submit" value="Log in">
+              </form>
+        </div>
+
+
+
+
+    </div></center>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+div.doctor{
+    background-color:antiquewhite;
+    margin-top:1%;
+    width:100%;
+    height:70vh;
+}
+body.body{
+    width:100%;
+    background-color:;
+}
+button.appointment{
+    margin-top:1%;
+    text-align:center;
+    font-size:2vmin;
+    
+}
+
+form{
+    margin-top:3%;
+    text-align: center;
+    font-size:2vmin;
+}
